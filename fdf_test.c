@@ -6,7 +6,7 @@
 /*   By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:04:00 by julrusse          #+#    #+#             */
-/*   Updated: 2024/12/12 17:47:24 by julrusse         ###   ########.fr       */
+/*   Updated: 2024/12/12 17:59:11 by julrusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,42 @@ int	main(void)
 		while (x < (1920 - 500))
 		{
 			my_mlx_pixel_put(&img, x, y, 0x00FF0000);
+			x++;
+		}
+		y++;
+	}
+	x = 700 + 200;
+	y = 350;
+	while (y < (350 + 150))
+	{
+		x = 700 + 200;
+		while (x < (1920 - 700 - 200))
+		{
+			my_mlx_pixel_put(&img, x, y, 0x00FFFFFF);
+			x++;
+		}
+		y++;
+	}
+	x = 700;
+	y = 350 + 150;
+	while (y < (350 + 150 + 150))
+	{
+		x = 700;
+		while (x < (1920 - 700))
+		{
+			my_mlx_pixel_put(&img, x, y, 0x00FFFFFF);
+			x++;
+		}
+		y++;
+	}
+	x = 700 + 200;
+	y = 350 + 150 + 150;
+	while (y < (350 + 150 + 150 + 150))
+	{
+		x = 700 + 200;
+		while (x < (1920 - 700 - 200))
+		{
+			my_mlx_pixel_put(&img, x, y, 0x00FFFFFF);
 			x++;
 		}
 		y++;
