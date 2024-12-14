@@ -6,11 +6,11 @@
 /*   By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 15:04:00 by julrusse          #+#    #+#             */
-/*   Updated: 2024/12/12 17:59:11 by julrusse         ###   ########.fr       */
+/*   Updated: 2024/12/14 15:59:48 by julrusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <mlx.h>
+#include "includes/fdf.h"
 
 typedef struct	s_data {
 	void	*img;

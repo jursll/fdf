@@ -3,20 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julrusse <julrusse@student.42.fr>          +#+  +:+       +#+        */
+/*   By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 15:06:17 by julrusse          #+#    #+#             */
-/*   Updated: 2024/12/06 11:24:17 by julrusse         ###   ########.fr       */
+/*   Updated: 2024/12/14 16:29:25 by julrusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 2
+# endif
+
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -52,12 +57,13 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
-int	        ft_printf(const char *format, ...);
-int	        ft_putchar_count(char c);
-int	        ft_putstr_count(char *s);
-int	        ft_putnbr_count(int number);
-int	        ft_unsignedint_count(unsigned int number);
-int	        ft_hex_count(unsigned int number, int uppercase);
-int	        ft_ptr_count(void *ptr);
+int			ft_printf(const char *format, ...);
+int			ft_putchar_count(char c);
+int			ft_putstr_count(char *s);
+int			ft_putnbr_count(int number);
+int			ft_unsignedint_count(unsigned int number);
+int			ft_hex_count(unsigned int number, int uppercase);
+int			ft_ptr_count(void *ptr);
+char		*get_next_line(int fd);
 
 #endif
