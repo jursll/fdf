@@ -6,7 +6,7 @@
 /*   By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 15:06:17 by julrusse          #+#    #+#             */
-/*   Updated: 2024/12/14 16:29:25 by julrusse         ###   ########.fr       */
+/*   Updated: 2024/12/22 14:44:33 by julrusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
+//----------PRINTF----------------------------------------------
 int			ft_printf(const char *format, ...);
 int			ft_putchar_count(char c);
 int			ft_putstr_count(char *s);
@@ -64,6 +65,12 @@ int			ft_putnbr_count(int number);
 int			ft_unsignedint_count(unsigned int number);
 int			ft_hex_count(unsigned int number, int uppercase);
 int			ft_ptr_count(void *ptr);
+//----------GNL----------------------------------------------
 char		*get_next_line(int fd);
+void		*gnl_calloc(int count, int size);
+char		*gnl_strjoin(char *s1, char *s2);
+char		*gnl_strchr(char *s, int c);
+char		*gnl_substr(char *s, int start, int len);
+int			gnl_strlen(char *s);
 
 #endif

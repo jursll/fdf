@@ -6,7 +6,7 @@
 /*   By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 12:36:16 by julrusse          #+#    #+#             */
-/*   Updated: 2024/12/14 15:26:46 by julrusse         ###   ########.fr       */
+/*   Updated: 2024/12/22 15:03:19 by julrusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static char	*read_and_stash(int fd, char *stash)
 	int		nbytes;
 	char	*buf;
 
-	buf = (char *)ft_calloc((BUFFER_SIZE + 1), sizeof(char));
+	buf = (char *)gnl_calloc((BUFFER_SIZE + 1), sizeof(char));
 	if (!buf)
 		return (NULL);
 	nbytes = 1;
@@ -29,10 +29,10 @@ static char	*read_and_stash(int fd, char *stash)
 		buf[nbytes] = '\0';
 		if (nbytes == 0)
 			break ;
-		stash = ft_strjoin(stash, buf);
+		stash = gnl_strjoin(stash, buf);
 		if (!stash)
 			return (free(buf), NULL);
-		if (ft_strchr(stash, '\n'))
+		if (gnl_strchr(stash, '\n'))
 			break ;
 	}
 	free(buf);
@@ -47,7 +47,7 @@ static char	*line_from_stash(char *prev_stash)
 	i = 0;
 	while (prev_stash[i] && prev_stash[i] != '\n')
 		i++;
-	line = ft_substr(prev_stash, 0, i + 1);
+	line = gnl_substr(prev_stash, 0, i + 1);
 	return (line);
 }
 
@@ -61,7 +61,7 @@ static char	*clear_stash(char	*prev_stash)
 		i++;
 	if (!prev_stash[i])
 		return (free(prev_stash), prev_stash = NULL, NULL);
-	new_stash = ft_substr(prev_stash, i + 1, (ft_strlen(prev_stash) - i - 1));
+	new_stash = gnl_substr(prev_stash, i + 1, (gnl_strlen(prev_stash) - i - 1));
 	return (free(prev_stash), prev_stash = NULL, new_stash);
 }
 

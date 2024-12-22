@@ -6,7 +6,7 @@
 #    By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/06 14:53:31 by julrusse          #+#    #+#              #
-#    Updated: 2024/10/14 14:56:26 by julrusse         ###   ########.fr        #
+#    Updated: 2024/12/22 15:00:56 by julrusse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,11 @@ FILES	= ft_isalpha.c \
 		  ft_putstr_fd.c \
 		  ft_putendl_fd.c \
 		  ft_putnbr_fd.c \
+		  ft_printf.c \
+		  ft_words_count.c \
+		  ft_numbers_count.c \
+		  get_next_line.c \
+		  gnl_utils.c \
 
 OBJ		= $(FILES:.c=.o)
 

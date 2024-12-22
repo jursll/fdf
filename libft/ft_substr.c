@@ -6,37 +6,12 @@
 /*   By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:43:33 by julrusse          #+#    #+#             */
-/*   Updated: 2024/12/14 15:21:01 by julrusse         ###   ########.fr       */
+/*   Updated: 2024/12/22 14:42:21 by julrusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_substr(char *s, int start, int len)
-{
-	char	*str;
-	int		i;
-	int		j;
-
-	if (!s || start >= ft_strlen(s))
-		return (NULL);
-	str = (char *)ft_calloc((len + 1), sizeof(char));
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
-	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	return (str);
-}
-/*
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
@@ -62,7 +37,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-*/
 /*
 int	main(void)
 {
