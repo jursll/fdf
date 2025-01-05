@@ -6,11 +6,22 @@
 /*   By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 15:40:21 by julrusse          #+#    #+#             */
-/*   Updated: 2024/12/22 15:40:29 by julrusse         ###   ########.fr       */
+/*   Updated: 2025/01/03 17:30:49 by julrusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/fdf.h"
+
+static int iso_x(int x, int y, int z)
+{
+	(void)z;
+	return ((x - y) * cos(0.523599));
+}
+
+static int iso_y(int x, int y, int z)
+{
+	return ((x + y) * sin(0.523599) - z);
+}
 
 static void	project_and_draw(t_data *data, int x, int y)
 {

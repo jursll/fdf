@@ -6,7 +6,7 @@
 /*   By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 11:23:03 by julrusse          #+#    #+#             */
-/*   Updated: 2024/12/22 15:44:46 by julrusse         ###   ########.fr       */
+/*   Updated: 2025/01/03 17:27:07 by julrusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,5 @@ typedef struct s_data
 void	read_map(char *filename, t_map *map);
 void	draw_map(t_data *data);
 void	draw_line(t_data *data, int x1, int y1, int x2, int y2);
-int		iso_x(int x, int y, int z);
-int		iso_y(int x, int y, int z);
 
 #endif

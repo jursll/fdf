@@ -6,11 +6,11 @@
 /*   By: julrusse <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 15:41:34 by julrusse          #+#    #+#             */
-/*   Updated: 2024/12/22 15:42:02 by julrusse         ###   ########.fr       */
+/*   Updated: 2025/01/05 16:16:31 by julrusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "includes/fdf.h"
 
 int	main(int argc, char **argv)
 {
@@ -29,3 +29,4 @@ int	main(int argc, char **argv)
 	mlx_loop(data.mlx);
 	return (0);
 }
+
